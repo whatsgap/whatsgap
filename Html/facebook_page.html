@@ -1,0 +1,25 @@
+<html>
+    <head>
+    <meta id="Viewport" name="viewport" width="initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+   </head>
+    <body>      
+        <script type="text/javascript">
+ 
+         function getFBid(){
+            return window.location.href.split("fbid=")[1];
+         }
+        
+       	 $(document).ready(function() {
+      		  var fbid = getFBid();
+      		  var element = document.getElementById("div1");
+ 			  $("#div1").append("<iframe src='https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fm.facebook.com%2F"+fbid+"&tabs=timeline&width="+document.body.clientWidth+"&height=" + document.body.clientHeight +"&small_header=true&adapt_container_width=false&hide_cover=false&show_facepile=false&appId=639359502913129' width='100%' height='100%' style='border:none;overflow:hidden' scrolling='no' frameborder='0' allowTransparency='true' allow='encrypted-media'></iframe>");
+         });
+        </script>
+
+     <div id="div1">
+	</div>
+
+       
+    </body>
+</html>
